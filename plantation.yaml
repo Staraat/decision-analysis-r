@@ -1,0 +1,52 @@
+name: Production Company
+type: decision
+Strategy A:
+    type: chance
+    High Demand:
+        p: 0.7
+        type: terminal
+        payoff: 650000
+    Low Demand:
+        p: 0.3
+        type: terminal
+        payoff: -850000
+Strategy B:
+    type: chance
+    High Demand:
+        p: 0.7
+        type: terminal
+        payoff: 400000
+    Low Demand:
+        p: 0.7
+        type: terminal
+        payoff: -225000
+Strategy C:
+    type: chance
+    Positive:
+        p: 0.8
+        type: decision
+        Large Plant:
+            type: chance
+            High Demand:
+                p: 0.9
+                type: terminal
+                payoff: 400000
+            Low Demand:
+                p: 0.1
+                type: terminal
+                payoff: -800000
+        Small Plant:
+            type: chance
+            High Demand:
+                p: 0.9
+                type: terminal
+                payoff: 250000
+            Low Demand:
+                p: 0.1
+                type: terminal
+                payoff: -250000
+    Negative:
+        p: 0.2
+        type: terminal
+        payoff: 0
+    
